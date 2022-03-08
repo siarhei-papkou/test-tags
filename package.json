@@ -4,11 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "dump-lib": "node ./scripts/dump-lib.js",
+    "dump-lib:prepatch": "npm run dump-lib -- --rank prepatch",
+    "dump-lib:patch": "npm run dump-lib -- --rank patch",
+    "dump-lib:minor": "npm run dump-lib -- --rank minor",
+    "dump-lib:major": "npm run dump-lib -- --rank major",
+    "commit-version": "node ./scripts/commit-version.js",
+    "commit-version:patch": "npm run dump-lib:patch && npm run commit-version",
+    "commit-version:minor": "npm run dump-lib:minor && npm run commit-version",
+    "commit-version:major": "npm run dump-lib:major && npm run commit-version",
+    "publish-lib": "npm run build-lib && node ./scripts/publish-lib.js",
+    "publish-lib:dev": "npm run build-lib && node ./scripts/publish-lib.js -- --develop"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "node-cmd": "3.0.0",
     "np": "^7.6.0"
   }
 }
