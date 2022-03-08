@@ -1,5 +1,5 @@
 const { invokeCommand, logSuccessInfo, logProcessInfo } = require('./utils');
-const releaseVersion = require('../src/app/library/package.json').version;
+const releaseVersion = require('../package.json').version;
 
 function commitLibraryReleaseVersion() {
   logProcessInfo(`Commit updated library package.json with ${releaseVersion} version`);
