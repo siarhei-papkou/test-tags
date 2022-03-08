@@ -1,11 +1,11 @@
 {
   "name": "test-tags-approach",
-  "version": "1.0.11",
+  "version": "1.0.12-beta.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dump-lib": "node ./scripts/dump-lib.js",
-    "dump-lib:prepatch": "npm run dump-lib -- --rank prepatch",
+    "dump-lib:prepatch": "npm version prepatch --preid beta --force",
     "dump-lib:patch": "npm run dump-lib -- --rank patch",
     "dump-lib:minor": "npm run dump-lib -- --rank minor",
     "dump-lib:major": "npm run dump-lib -- --rank major",
