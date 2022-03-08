@@ -13,9 +13,8 @@
     "commit-version:patch": "npm run dump-lib:patch && npm run commit-version",
     "commit-version:minor": "npm run dump-lib:minor && npm run commit-version",
     "commit-version:major": "npm run dump-lib:major && npm run commit-version",
-    "commit-version:prepatch": "npm run dump-lib:prepatch && npm run commit-version",
     "publish-lib": "node ./scripts/publish-lib.js",
-    "publish-lib:dev": "node ./scripts/publish-lib.js --develop"
+    "publish-lib:dev": "node ./scripts/publish-lib.js -- --develop"
   },
   "author": "",
   "license": "ISC",

@@ -1,13 +1,15 @@
 const { invokeCommand, logSuccessInfo, logProcessInfo } = require('./utils');
-const libVersion = require('../src/app/library/package.json').version;
+const libVersion = require('../package.json').version;
 
 function publishLibrary() {
-  const isDev = process.argv[process.argv.indexOf('--develop') + 1];
+  console.log(process.argv);
+
+  const isDev = process.argv.indexOf('--develop') > 0
   logProcessInfo(`Publish library version ${libVersion} to github`);
 
   const command = 'cd dist && npm publish' + isDev? ' --tag=develop': "";
   invokeCommand(
-    'cd dist && npm publish',
+      command,
     'The publishing of the library has been failed',
     logSuccessPublish,
   )
