@@ -1,8 +1,9 @@
 {
   "name": "test-tags-approach",
-  "version": "1.0.17",
+  "version": "1.0.18-beta.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://www.npmjs.com/package/test-tags-approach",
   "scripts": {
     "dump-lib": "node ./scripts/dump-lib.js",
     "dump-lib:prerelease": "npm version prerelease --preid beta --force",
