@@ -1,6 +1,6 @@
 {
   "name": "test-tags-approach",
-  "version": "2.0.0",
+  "version": "2.0.1-beta.0",
   "description": "",
   "main": "index.js",
   "homepage": "https://www.npmjs.com/package/test-tags-approach",
@@ -14,7 +14,7 @@
     "commit-version:patch": "npm run dump-lib:patch && npm run commit-version",
     "commit-version:minor": "npm run dump-lib:minor && npm run commit-version",
     "commit-version:major": "npm run dump-lib:major && npm run commit-version",
-    "commit-version:prepatch": "npm run dump-lib:prepatch && npm run commit-version",
+    "commit-version:prerelease": "npm run dump-lib:prerelease && npm run commit-version",
     "publish-lib": "node ./scripts/publish-lib.js",
     "publish-lib:dev": "node ./scripts/publish-lib.js --develop"
   },
