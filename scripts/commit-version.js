@@ -4,7 +4,7 @@ const releaseVersion = require('../package.json').version;
 function commitLibraryReleaseVersion() {
   logProcessInfo(`Commit updated library package.json with ${releaseVersion} version`);
   invokeCommand(
-    `git add src/app/library/package.json && git commit -m "Updated package.json version to ${releaseVersion}" --no-verify`,
+    `git add package.json && git commit -m "Updated package.json version to ${releaseVersion}" --no-verify`,
     `Release: Commit library package.json version to ${releaseVersion} has been failed`,
     upgradeApplicationPackageVersion
   );
